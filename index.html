@@ -3,65 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web Programming Exercise 12</title>
+<title>Hello World Boxes</title>
 <style>
   body {
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-  }
-
-  .container {
     background-color: white;
-    padding: 30px 40px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    text-align: center;
+    font-family: "Times New Roman", serif;
   }
 
   .box {
-    width: 500px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
-    margin: 15px auto;
-    color: black;
+    margin: 10px 0;
+    width: 500px;
+    text-align: left;
+    padding: 10px;
   }
 
   .box1 {
-    background-color: #a7c8dc; 
-    border: 5px solid red;
+    background-color: lightblue;
+    border: 8px double red;
   }
 
   .box2 {
-    background-color: #fff200; 
-    border: 5px solid blue;
+    background-color: yellow;
+    border: 3px solid blue;
+    border-radius: 10px;
   }
 
-  /* Box 3 */
   .box3 {
-    background-color: #4caf50; 
-    border: 5px solid green;
-    background-image: radial-gradient(circle, #ff7b7b 8%, transparent 9%);
+    background-color: green;
+    background-image: radial-gradient(brown 15%, transparent 16%);
     background-size: 30px 30px;
-  }
-
-  .note {
-    color: red;
-    font-style: italic;
-    margin-top: 20px;
-    font-size: 18px;
+    border: none;
   }
 </style>
 </head>
 <body>
-  <div class="container">
-    <div class="box box1">Hello World</div>
-    <div class="box box2">Hello World</div>
-    <div class="box box3">Hello World</div>
-  </div>
+
+<div class="box box1">Hello World</div>
+<div class="box box2">Hello World</div>
+<div class="box box3">Hello World</div>
+
 </body>
 </html>
