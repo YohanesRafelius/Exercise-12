@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello World Boxes Final</title>
+<title>Exercise 12</title>
 <style>
   body {
     background-color: white;
@@ -39,10 +39,17 @@
   /* Kotak 3 */
   .box3 {
     background-color: #6fdc6f; /* Hijau terang */
-    background-image: radial-gradient(brown 18%, transparent 19%);
-    background-size: 30px 30px;
-    background-position: 0 0; /* mulai dari kiri atas */
     border: none;
+    position: relative;
+    /* Bulet-bulet di semua sisi */
+    background-image:
+      radial-gradient(brown 4px, transparent 5px),
+      radial-gradient(brown 4px, transparent 5px),
+      radial-gradient(brown 4px, transparent 5px),
+      radial-gradient(brown 4px, transparent 5px);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position: top left, bottom left, left top, right top;
+    background-size: 30px 30px, 30px 30px, 30px 30px, 30px 30px;
   }
 </style>
 </head>
