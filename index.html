@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    position: relative; /* Untuk pseudo-element */
   }
 
   /* Kotak 1 */
@@ -40,16 +41,23 @@
   .box3 {
     background-color: #6fdc6f; /* Hijau terang */
     border: none;
-    position: relative;
-    /* Bulet-bulet di semua sisi */
-    background-image:
-      radial-gradient(brown 4px, transparent 5px),
-      radial-gradient(brown 4px, transparent 5px),
-      radial-gradient(brown 4px, transparent 5px),
-      radial-gradient(brown 4px, transparent 5px);
-    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-    background-position: top left, bottom left, left top, right top;
-    background-size: 30px 30px, 30px 30px, 30px 30px, 30px 30px;
+  }
+
+  /* Bulet-bulet frame untuk kotak hijau */
+  .box3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background:
+      radial-gradient(circle, brown 4px, transparent 5px) top left repeat-x,
+      radial-gradient(circle, brown 4px, transparent 5px) bottom left repeat-x,
+      radial-gradient(circle, brown 4px, transparent 5px) left top repeat-y,
+      radial-gradient(circle, brown 4px, transparent 5px) right top repeat-y;
+    background-size: 30px 30px;
   }
 </style>
 </head>
