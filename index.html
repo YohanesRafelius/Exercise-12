@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exercise 12</title>
+<title>Hello World Boxes Final</title>
 <style>
   body {
     background-color: white;
@@ -14,14 +14,14 @@
     font-size: 24px;
     font-weight: bold;
     margin: 10px auto;
-    width: 500px; /* Semua kotak sejajar dan sama lebar */
+    width: 500px;
     text-align: left;
     padding: 10px;
-    height: 60px; /* Tinggi sama semua */
+    height: 60px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    position: relative; /* Untuk pseudo-element */
+    position: relative;
   }
 
   /* Kotak 1 */
@@ -43,7 +43,7 @@
     border: none;
   }
 
-  /* Bulet-bulet frame untuk kotak hijau */
+  /* Bulet-bulet frame kotak hijau */
   .box3::before {
     content: "";
     position: absolute;
@@ -53,11 +53,16 @@
     height: 100%;
     pointer-events: none;
     background:
-      radial-gradient(circle, brown 4px, transparent 5px) top left repeat-x,
-      radial-gradient(circle, brown 4px, transparent 5px) bottom left repeat-x,
-      radial-gradient(circle, brown 4px, transparent 5px) left top repeat-y,
-      radial-gradient(circle, brown 4px, transparent 5px) right top repeat-y;
-    background-size: 30px 30px;
+      /* atas */
+      repeating-radial-gradient(circle, brown 0px, brown 4px, transparent 5px) top/30px 100% repeat-x,
+      /* bawah */
+      repeating-radial-gradient(circle, brown 0px, brown 4px, transparent 5px) bottom/30px 100% repeat-x,
+      /* kiri */
+      repeating-radial-gradient(circle, brown 0px, brown 4px, transparent 5px) left/100% 30px repeat-y,
+      /* kanan */
+      repeating-radial-gradient(circle, brown 0px, brown 4px, transparent 5px) right/100% 30px repeat-y;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-position: top left, bottom left, left top, right top;
   }
 </style>
 </head>
