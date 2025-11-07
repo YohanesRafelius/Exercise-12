@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello World Boxes</title>
+<title>Hello World Boxes Final</title>
 <style>
   body {
     background-color: white;
@@ -13,32 +13,36 @@
   .box {
     font-size: 24px;
     font-weight: bold;
-    margin: 10px 0;
-    width: 500px; /* Semua kotak sama panjang */
+    margin: 10px auto;
+    width: 500px; /* Semua kotak sejajar dan sama lebar */
     text-align: left;
     padding: 10px;
+    height: 60px; /* Tinggi sama semua */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
   }
 
+  /* Kotak 1 */
   .box1 {
     background-color: lightblue;
     border: 8px double red;
-    margin-left: 20px; /* agak ke kiri */
   }
 
+  /* Kotak 2 */
   .box2 {
     background-color: yellow;
     border: 3px solid blue;
     border-radius: 10px;
-    margin-left: 20px; /* sejajar dengan kotak 1 */
   }
 
+  /* Kotak 3 */
   .box3 {
-    background-color: #70d470; /* hijau lebih terang */
-    background-image: radial-gradient(brown 17%, transparent 18%);
-    background-size: 25px 25px;
-    background-position: 0px -5px; /* geser pola bulat sedikit ke atas */
+    background-color: #6fdc6f; /* Hijau terang */
+    background-image: radial-gradient(brown 18%, transparent 19%);
+    background-size: 30px 30px;
+    background-position: 0 0; /* mulai dari kiri atas */
     border: none;
-    margin-left: 20px; /* sejajar */
   }
 </style>
 </head>
